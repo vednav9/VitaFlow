@@ -1,0 +1,36 @@
+{
+  "user": "Alex",
+  "score": 85,
+  "calories": { "current": 1850, "target": 2400 },
+  "sleep": [
+    { "day": "Mon", "hours": 6 },
+    { "day": "Tue", "hours": 7.5 },
+    { "day": "Wed", "hours": 8 },
+    { "day": "Thu", "hours": 5.5 },
+    { "day": "Fri", "hours": 7 },
+    { "day": "Sat", "hours": 7.5 },
+    { "day": "Sun", "hours": 8 }
+  ],
+  "stress": [
+    { "day": "Mon", "level": 40 },
+    { "day": "Tue", "level": 55 },
+    { "day": "Wed", "level": 30 },
+    { "day": "Thu", "level": 25 },
+    { "day": "Fri", "level": 45 },
+    { "day": "Sat", "level": 35 },
+    { "day": "Sun", "level": 20 }
+  ],
+  "activity": { "steps": 8432, "activeMinutes": 45 },
+  "hydration": { "current": 1200, "target": 2500 },
+  "screenTime": { "hours": 4.5, "status": "moderate" },
+  "mood": "happy",
+  "streak": 12,
+  "detox": { "daysLeft": 5, "total": 7 },
+  "milestones": [
+    { "id": 1, "label": "Start Journey", "completed": true },
+    { "id": 2, "label": "First 5k Steps", "completed": true },
+    { "id": 3, "label": "7 Day Streak", "completed": true },
+    { "id": 4, "label": "Perfect Sleep Week", "completed": false },
+    { "id": 5, "label": "Meditation Master", "completed": false }
+  ]
+}
