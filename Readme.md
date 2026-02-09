@@ -432,6 +432,20 @@ Judges remember **experience**, not complexity.
 
 ---
 
+# Screenshots
+![alt text](Public/1.png)
+![alt text](Public/2.png)
+![alt text](Public/4.png)
+![alt text](Public/6.png)
+![alt text](Public/7.png)
+![alt text](Public/8.png)
+![alt text](Public/9.png)
+![alt text](Public/10.png)
+
+---
+
+
+
 # 👨‍💻 Built With
 
 React.js + Tailwind CSS
