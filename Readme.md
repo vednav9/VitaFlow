@@ -432,12 +432,6 @@ Judges remember **experience**, not complexity.
 
 ---
 
-# 🏁 Final Pitch Line
-
-> “VitaFlow OS is an immersive, animated wellness platform that turns daily health into a beautiful, interactive journey — combining storytelling, motion design, and gamification to make healthcare engaging and enjoyable.”
-
----
-
 # 👨‍💻 Built With
 
 React.js + Tailwind CSS
