@@ -3,17 +3,18 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from '../components/ui/Button';
 import { PageTransition } from '../components/ui/Loader';
 import { ArrowRight, Activity, Moon, Zap, Sparkles } from 'lucide-react';
+import logo from '../components/Images/logo.png'
 
 const FloatingIcon = ({ icon: Icon, color, x, y, delay }) => (
   <motion.div
     initial={{ opacity: 0, x: 0, y: 0 }}
-    animate={{ 
+    animate={{
       opacity: [0.4, 1, 0.4],
       x: [x, x + 30, x],
       y: [y, y - 30, y],
     }}
-    transition={{ 
-      duration: 5, 
+    transition={{
+      duration: 5,
       repeat: Infinity,
       delay: delay,
       ease: "easeInOut"
@@ -32,16 +33,16 @@ export default function Home() {
       <div className="relative h-screen flex flex-col items-center justify-center overflow-hidden bg-black selection:bg-purple-500/30">
         {/* Background Animated Shapes */}
         <div className="absolute inset-0 overflow-hidden">
-          <motion.div 
-            animate={{ 
+          <motion.div
+            animate={{
               scale: [1, 1.2, 1],
               rotate: [0, 90, 0],
             }}
             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
             className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] bg-purple-900/30 rounded-full blur-[120px]"
           />
-          <motion.div 
-            animate={{ 
+          <motion.div
+            animate={{
               scale: [1, 1.5, 1],
               x: [0, 100, 0],
             }}
@@ -58,9 +59,7 @@ export default function Home() {
             transition={{ duration: 1, ease: "easeOut" }}
             className="flex justify-center mb-6"
           >
-             <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-cyan-400 to-blue-600 flex items-center justify-center shadow-[0_0_50px_rgba(6,182,212,0.5)]">
-               <Sparkles size={32} className="text-white" />
-             </div>
+            <img src={logo} alt="Logo" className="w-24 h-24" />
           </motion.div>
 
           <motion.div
@@ -90,27 +89,27 @@ export default function Home() {
             transition={{ delay: 1, type: "spring", stiffness: 100 }}
             className="flex flex-col md:flex-row justify-center gap-6 pt-12"
           >
-            <Button 
-              variant="primary" 
+            <Button
+              variant="primary"
               onClick={() => navigate('/assessment')}
               className="text-lg px-12 py-4"
             >
               Start Journey <ArrowRight size={24} />
             </Button>
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               onClick={() => navigate('/dashboard')}
               className="text-lg px-12 py-4"
             >
-               Skip to Dashboard
+              Skip to Dashboard
             </Button>
           </motion.div>
 
           {/* Floating Icons */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[150%] pointer-events-none">
-             <FloatingIcon icon={Activity} color="text-pink-400" x={-350} y={-250} delay={0} />
-             <FloatingIcon icon={Moon} color="text-purple-400" x={450} y={150} delay={1.5} />
-             <FloatingIcon icon={Zap} color="text-yellow-400" x={-450} y={250} delay={2.5} />
+            <FloatingIcon icon={Activity} color="text-pink-400" x={-350} y={-250} delay={0} />
+            <FloatingIcon icon={Moon} color="text-purple-400" x={450} y={150} delay={1.5} />
+            <FloatingIcon icon={Zap} color="text-yellow-400" x={-450} y={250} delay={2.5} />
           </div>
         </div>
       </div>
