@@ -247,6 +247,7 @@ Feels like Duolingo-style health progression.
 * sleep reminder
 * meditation timer
 * focus timer
+* Every 3 seconds random
 
 Animated toast notifications.
 
@@ -257,6 +258,10 @@ Animated toast notifications.
 * mobile
 * tablet
 * desktop
+
+Designed mobile-first.
+
+## ⚫ 10. Light and Dark Mode
 
 Designed mobile-first.
 

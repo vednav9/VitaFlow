@@ -1,15 +1,15 @@
 {
   "user": "Alex",
-  "score": 85,
+  "score": 87,
   "calories": { "current": 1850, "target": 2400 },
   "sleep": [
-    { "day": "Mon", "hours": 6 },
-    { "day": "Tue", "hours": 7.5 },
-    { "day": "Wed", "hours": 8 },
-    { "day": "Thu", "hours": 5.5 },
-    { "day": "Fri", "hours": 7 },
-    { "day": "Sat", "hours": 7.5 },
-    { "day": "Sun", "hours": 8 }
+    { "day": "Mon", "hours": 6, "quality": 75 },
+    { "day": "Tue", "hours": 7.5, "quality": 85 },
+    { "day": "Wed", "hours": 8, "quality": 92 },
+    { "day": "Thu", "hours": 5.5, "quality": 60 },
+    { "day": "Fri", "hours": 7, "quality": 80 },
+    { "day": "Sat", "hours": 7.5, "quality": 88 },
+    { "day": "Sun", "hours": 8, "quality": 95 }
   ],
   "stress": [
     { "day": "Mon", "level": 40 },
@@ -20,9 +20,43 @@
     { "day": "Sat", "level": 35 },
     { "day": "Sun", "level": 20 }
   ],
-  "activity": { "steps": 8432, "activeMinutes": 45 },
+  "heartRate": [
+    { "time": "12 AM", "bpm": 60 },
+    { "time": "3 AM", "bpm": 55 },
+    { "time": "6 AM", "bpm": 58 },
+    { "time": "9 AM", "bpm": 85 },
+    { "time": "12 PM", "bpm": 75 },
+    { "time": "3 PM", "bpm": 80 },
+    { "time": "6 PM", "bpm": 95 },
+    { "time": "9 PM", "bpm": 70 }
+  ],
+  "activity": { 
+    "steps": 8432, 
+    "activeMinutes": 45,
+    "weekly": [
+      { "name": "Mon", "steps": 5000 },
+      { "name": "Tue", "steps": 7500 },
+      { "name": "Wed", "steps": 10000 },
+      { "name": "Thu", "steps": 6000 },
+      { "name": "Fri", "steps": 8500 },
+      { "name": "Sat", "steps": 12000 },
+      { "name": "Sun", "steps": 9000 }
+    ]
+  },
   "hydration": { "current": 1200, "target": 2500 },
-  "screenTime": { "hours": 4.5, "status": "moderate" },
+  "screenTime": { 
+    "hours": 4.5, 
+    "status": "moderate",
+    "weekly": [
+      { "day": "Mon", "hours": 5.5 },
+      { "day": "Tue", "hours": 4.2 },
+      { "day": "Wed", "hours": 3.8 },
+      { "day": "Thu", "hours": 6.0 },
+      { "day": "Fri", "hours": 4.5 },
+      { "day": "Sat", "hours": 2.5 },
+      { "day": "Sun", "hours": 3.0 }
+    ]
+  },
   "mood": "happy",
   "streak": 12,
   "detox": { "daysLeft": 5, "total": 7 },
