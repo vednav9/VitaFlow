@@ -2,7 +2,7 @@
 
 ### AI-Inspired Interactive Wellness Journey Platform
 
-### *A cinematic, animated, and gamified healthcare experience built with React*
+### _A cinematic, animated, and gamified healthcare experience built with React_
 
 ---
 
@@ -12,12 +12,12 @@
 
 Unlike traditional dashboards or chatbots, VitaFlow creates an **immersive Health Operating System experience** using:
 
-* smooth animations
-* motion design
-* glassmorphism UI
-* gamification
-* interactive storytelling
-* guided wellness tools
+- smooth animations
+- motion design
+- glassmorphism UI
+- gamification
+- interactive storytelling
+- guided wellness tools
 
 It helps users:
 
@@ -63,31 +63,31 @@ Health becomes **interactive, visual, and enjoyable**.
 
 ### Inspired by
 
-* Apple Health
-* Headspace
-* Fitbit
-* Tesla UI
-* Glassmorphism dashboards
+- Apple Health
+- Headspace
+- Fitbit
+- Tesla UI
+- Glassmorphism dashboards
 
 ### Visual Style
 
-* glass cards
-* glow effects
-* gradients
-* soft shadows
-* neon highlights
-* floating components
-* smooth transitions
-* micro-interactions
+- glass cards
+- glow effects
+- gradients
+- soft shadows
+- neon highlights
+- floating components
+- smooth transitions
+- micro-interactions
 
 ### Experience Goals
 
-* aesthetic
-* satisfying
-* creative
-* motion-rich
-* visually immersive
-* premium feel
+- aesthetic
+- satisfying
+- creative
+- motion-rich
+- visually immersive
+- premium feel
 
 ---
 
@@ -125,20 +125,20 @@ Interactive quiz to understand lifestyle.
 
 ### Includes
 
-* animated step cards
-* slide transitions
-* progress bar waves
-* score calculation
-* animated gauge reveal
+- animated step cards
+- slide transitions
+- progress bar waves
+- score calculation
+- animated gauge reveal
 
 ### Metrics Collected
 
-* sleep
-* stress
-* activity
-* screen time
-* food habits
-* mood
+- sleep
+- stress
+- activity
+- screen time
+- food habits
+- mood
 
 ---
 
@@ -146,24 +146,24 @@ Interactive quiz to understand lifestyle.
 
 ### Shows
 
-* health score ring
-* calorie tracking
-* sleep graphs
-* stress charts
-* active minutes
-* screen time
-* detox status
-* mood status
-* notifications
-* daily insights
+- health score ring
+- calorie tracking
+- sleep graphs
+- stress charts
+- active minutes
+- screen time
+- detox status
+- mood status
+- notifications
+- daily insights
 
 ### UI Elements
 
-* glass cards
-* animated charts
-* glowing borders
-* hover lift effects
-* counters
+- glass cards
+- animated charts
+- glowing borders
+- hover lift effects
+- counters
 
 ---
 
@@ -173,11 +173,11 @@ Interactive quiz to understand lifestyle.
 
 ### Features
 
-* chat interface
-* predefined suggestions
-* wellness tips
-* guided messages
-* voice-like typing animation
+- chat interface
+- predefined suggestions
+- wellness tips
+- guided messages
+- voice-like typing animation
 
 Simulates AI behavior with static data.
 
@@ -187,11 +187,11 @@ Simulates AI behavior with static data.
 
 ### Includes
 
-* breathing exercise circle
-* inhale/exhale timer
-* guided steps
-* calm animations
-* sound wave visualization
+- breathing exercise circle
+- inhale/exhale timer
+- guided steps
+- calm animations
+- sound wave visualization
 
 Helps reduce stress in real time.
 
@@ -201,11 +201,11 @@ Helps reduce stress in real time.
 
 ### Includes
 
-* emoji mood slider
-* gradient mood backgrounds
-* screen time tracking
-* detox countdown
-* streak tracking
+- emoji mood slider
+- gradient mood backgrounds
+- screen time tracking
+- detox countdown
+- streak tracking
 
 ---
 
@@ -215,10 +215,10 @@ Mini-games to reduce anxiety.
 
 ### Example Games
 
-* tap-to-calm bubbles
-* breathing rhythm game
-* focus timer challenge
-* memory relax game
+- tap-to-calm bubbles
+- breathing rhythm game
+- focus timer challenge
+- memory relax game
 
 Encourages engagement and fun.
 
@@ -230,11 +230,11 @@ Gamified progress path.
 
 ### Includes
 
-* step completion
-* animated path
-* badges
-* streak flames
-* rewards
+- step completion
+- animated path
+- badges
+- streak flames
+- rewards
 
 Feels like Duolingo-style health progression.
 
@@ -242,12 +242,12 @@ Feels like Duolingo-style health progression.
 
 ## ⚪ 8. Notifications & Timers
 
-* hydration reminder
-* stretch alert
-* sleep reminder
-* meditation timer
-* focus timer
-* Every 3 seconds random
+- hydration reminder
+- stretch alert
+- sleep reminder
+- meditation timer
+- focus timer
+- Every 3 seconds random
 
 Animated toast notifications.
 
@@ -255,9 +255,9 @@ Animated toast notifications.
 
 ## ⚫ 9. Fully Responsive
 
-* mobile
-* tablet
-* desktop
+- mobile
+- tablet
+- desktop
 
 Designed mobile-first.
 
@@ -271,28 +271,28 @@ Designed mobile-first.
 
 ## Page Level
 
-* slide transitions
-* fade transitions
-* shared layout animation
-* route transitions
+- slide transitions
+- fade transitions
+- shared layout animation
+- route transitions
 
 ## Component Level
 
-* hover lift
-* glow effects
-* counters
-* graph drawing
-* ripple clicks
-* card flips
-* skeleton loaders
+- hover lift
+- glow effects
+- counters
+- graph drawing
+- ripple clicks
+- card flips
+- skeleton loaders
 
 ## Special Effects
 
-* confetti
-* pulse rings
-* gradient shifts
-* parallax
-* blur glass
+- confetti
+- pulse rings
+- gradient shifts
+- parallax
+- blur glass
 
 ---
 
@@ -300,24 +300,24 @@ Designed mobile-first.
 
 ## Frontend
 
-* React.js
-* Tailwind CSS
+- React.js
+- Tailwind CSS
 
 ## Animation
 
-* Framer Motion
-* CSS transitions
-* Lottie (optional)
+- Framer Motion
+- CSS transitions
+- Lottie (optional)
 
 ## Charts
 
-* Recharts / Chart.js
+- Recharts / Chart.js
 
 ## Data
 
-* Static JSON
-* No backend
-* No AI API
+- Static JSON
+- No backend
+- No AI API
 
 ---
 
@@ -422,13 +422,13 @@ Judges remember **experience**, not complexity.
 
 # 🔮 Future Scope
 
-* real wearable integration
-* AI health predictions
-* voice assistant
-* backend sync
-* cloud storage
-* smart notifications
-* doctor consultation
+- real wearable integration
+- AI health predictions
+- voice assistant
+- backend sync
+- cloud storage
+- smart notifications
+- doctor consultation
 
 ---
 

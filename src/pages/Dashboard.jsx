@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import {
   LineChart,
   Line,
@@ -8,9 +8,9 @@ import {
   ResponsiveContainer,
   AreaChart,
   Area,
-} from 'recharts';
-import { Sidebar } from '../components/Sidebar';
-import { Button } from '../components/ui/Button';
+} from "recharts";
+import { Sidebar } from "../components/Sidebar";
+import { Button } from "../components/ui/Button";
 import {
   Activity,
   Moon,
@@ -25,11 +25,11 @@ import {
   Target,
   ChevronRight,
   Plus,
-} from 'lucide-react';
-import metrics from '../data/metrics.json';
-import tips from '../data/tips.json';
+} from "lucide-react";
+import metrics from "../data/metrics.json";
+import tips from "../data/tips.json";
 
-const GlassCard = ({ children, className = '', delay = 0 }) => (
+const GlassCard = ({ children, className = "", delay = 0 }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
@@ -66,7 +66,7 @@ const StatCard = ({ title, value, subtext, icon: Icon, color, delay }) => (
   </GlassCard>
 );
 
-const ChartCard = ({ title, children, delay, className = '' }) => (
+const ChartCard = ({ title, children, delay, className = "" }) => (
   <GlassCard delay={delay} className={`flex flex-col ${className}`}>
     <div className="mb-6 flex items-center justify-between">
       <h3 className="text-lg font-medium text-gray-200">{title}</h3>
@@ -82,22 +82,22 @@ const CoachWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
     {
-      role: 'ai',
-      text: 'Hello Alex! I noticed your sleep was a bit short last night. Try a 10-min meditation from the Relax tab.',
+      role: "ai",
+      text: "Hello Alex! I noticed your sleep was a bit short last night. Try a 10-min meditation from the Relax tab.",
     },
   ]);
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState("");
 
   const handleSend = () => {
     if (!input.trim()) return;
-    setMessages([...messages, { role: 'user', text: input }]);
-    setInput('');
+    setMessages([...messages, { role: "user", text: input }]);
+    setInput("");
     setTimeout(() => {
       setMessages((prev) => [
         ...prev,
         {
-          role: 'ai',
-          text: 'That sounds like a great plan. Hydration is key too!',
+          role: "ai",
+          text: "That sounds like a great plan. Hydration is key too!",
         },
       ]);
     }, 1000);
@@ -138,13 +138,13 @@ const CoachWidget = () => {
             {messages.map((msg, i) => (
               <div
                 key={i}
-                className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
+                className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
               >
                 <div
                   className={`max-w-[80%] rounded-2xl p-3 text-sm leading-relaxed ${
-                    msg.role === 'user'
-                      ? 'rounded-br-none bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg'
-                      : 'rounded-bl-none border border-white/5 bg-white/10 text-gray-200'
+                    msg.role === "user"
+                      ? "rounded-br-none bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg"
+                      : "rounded-bl-none border border-white/5 bg-white/10 text-gray-200"
                   } `}
                 >
                   {msg.text}
@@ -159,7 +159,7 @@ const CoachWidget = () => {
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                onKeyPress={(e) => e.key === 'Enter' && handleSend()}
+                onKeyPress={(e) => e.key === "Enter" && handleSend()}
                 placeholder="Ask for advice..."
                 className="w-full rounded-full border border-white/10 bg-black/40 px-4 py-3 text-sm text-white placeholder-gray-500 transition-colors focus:border-cyan-500/50 focus:outline-none"
               />
@@ -197,7 +197,7 @@ export default function Dashboard() {
         <header className="mb-10 flex items-center justify-between">
           <div>
             <h1 className="mb-1 text-3xl font-bold text-white">
-              Welcome back,{' '}
+              Welcome back,{" "}
               <span className="animate-pulse-slow bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
                 {data.user}
               </span>
@@ -263,7 +263,7 @@ export default function Dashboard() {
                   strokeDasharray="552"
                   initial={{ strokeDashoffset: 552 }}
                   animate={{ strokeDashoffset: 552 - (552 * data.score) / 100 }}
-                  transition={{ duration: 2, ease: 'easeOut' }}
+                  transition={{ duration: 2, ease: "easeOut" }}
                 />
                 <defs>
                   <linearGradient
@@ -289,7 +289,7 @@ export default function Dashboard() {
               </div>
             </div>
             <p className="max-w-[80%] text-center text-sm text-gray-400">
-              Your vitality is in the top{' '}
+              Your vitality is in the top{" "}
               <span className="text-cyan-400">15%</span> of users this week.
             </p>
           </GlassCard>
@@ -342,7 +342,7 @@ export default function Dashboard() {
                 animate={{
                   width: `${(hydration / data.hydration.target) * 100}%`,
                 }}
-                transition={{ type: 'spring', stiffness: 50 }}
+                transition={{ type: "spring", stiffness: 50 }}
               />
             </div>
           </GlassCard>
@@ -388,13 +388,13 @@ export default function Dashboard() {
                 />
                 <Tooltip
                   contentStyle={{
-                    backgroundColor: '#000',
-                    border: '1px solid #333',
-                    borderRadius: '12px',
-                    boxShadow: '0 10px 30px -10px rgba(0,0,0,0.5)',
+                    backgroundColor: "#000",
+                    border: "1px solid #333",
+                    borderRadius: "12px",
+                    boxShadow: "0 10px 30px -10px rgba(0,0,0,0.5)",
                   }}
-                  itemStyle={{ color: '#fff' }}
-                  cursor={{ stroke: 'rgba(255,255,255,0.1)', strokeWidth: 2 }}
+                  itemStyle={{ color: "#fff" }}
+                  cursor={{ stroke: "rgba(255,255,255,0.1)", strokeWidth: 2 }}
                 />
                 <Area
                   type="monotone"
@@ -424,11 +424,11 @@ export default function Dashboard() {
                 />
                 <Tooltip
                   contentStyle={{
-                    backgroundColor: '#000',
-                    border: '1px solid #333',
-                    borderRadius: '12px',
+                    backgroundColor: "#000",
+                    border: "1px solid #333",
+                    borderRadius: "12px",
                   }}
-                  itemStyle={{ color: '#fff' }}
+                  itemStyle={{ color: "#fff" }}
                 />
                 <Line
                   type="monotone"
@@ -437,11 +437,11 @@ export default function Dashboard() {
                   strokeWidth={3}
                   dot={{
                     r: 4,
-                    fill: '#000',
-                    stroke: '#fb7185',
+                    fill: "#000",
+                    stroke: "#fb7185",
                     strokeWidth: 2,
                   }}
-                  activeDot={{ r: 8, strokeWidth: 0, fill: '#fff' }}
+                  activeDot={{ r: 8, strokeWidth: 0, fill: "#fff" }}
                 />
               </LineChart>
             </ResponsiveContainer>
@@ -499,10 +499,10 @@ export default function Dashboard() {
               <span
                 className={`text-sm font-bold ${
                   moodValue > 75
-                    ? 'text-green-400'
+                    ? "text-green-400"
                     : moodValue > 50
-                      ? 'text-yellow-400'
-                      : 'text-red-400'
+                      ? "text-yellow-400"
+                      : "text-red-400"
                 }`}
               >
                 {moodValue}%
@@ -516,12 +516,12 @@ export default function Dashboard() {
                 className="text-7xl drop-shadow-lg filter"
               >
                 {moodValue > 75
-                  ? '🤩'
+                  ? "🤩"
                   : moodValue > 50
-                    ? '🙂'
+                    ? "🙂"
                     : moodValue > 25
-                      ? '😐'
-                      : '😔'}
+                      ? "😐"
+                      : "😔"}
               </motion.div>
               <input
                 type="range"
@@ -544,7 +544,7 @@ export default function Dashboard() {
                 Milestones
               </h3>
               <span className="rounded-full bg-purple-500/20 px-3 py-1 text-xs font-bold uppercase tracking-wider text-purple-300">
-                {data.milestones.filter((m) => m.completed).length} /{' '}
+                {data.milestones.filter((m) => m.completed).length} /{" "}
                 {data.milestones.length}
               </span>
             </div>
@@ -557,14 +557,14 @@ export default function Dashboard() {
                   <div
                     className={`flex h-6 w-6 items-center justify-center rounded-full border ${
                       milestone.completed
-                        ? 'border-green-500 bg-green-500/20 text-green-400'
-                        : 'border-gray-600 bg-transparent text-gray-600'
+                        ? "border-green-500 bg-green-500/20 text-green-400"
+                        : "border-gray-600 bg-transparent text-gray-600"
                     }`}
                   >
                     {milestone.completed && <Trophy size={12} />}
                   </div>
                   <span
-                    className={`text-sm ${milestone.completed ? 'text-gray-200 line-through opacity-50' : 'text-white'}`}
+                    className={`text-sm ${milestone.completed ? "text-gray-200 line-through opacity-50" : "text-white"}`}
                   >
                     {milestone.label}
                   </span>

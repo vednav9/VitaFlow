@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Sidebar } from '../components/Sidebar';
-import { Button } from '../components/ui/Button';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Sidebar } from "../components/Sidebar";
+import { Button } from "../components/ui/Button";
 import {
   Play,
   Pause,
@@ -11,42 +11,42 @@ import {
   CloudRain,
   Music,
   Waves,
-} from 'lucide-react';
+} from "lucide-react";
 
 const techniques = [
   {
-    id: 'box',
-    name: 'Box Breathing',
-    subtitle: 'Focus & Clarity',
+    id: "box",
+    name: "Box Breathing",
+    subtitle: "Focus & Clarity",
     pattern: [4, 4, 4, 4],
-    color: 'cyan',
+    color: "cyan",
   },
   {
-    id: 'relax',
-    name: '4-7-8 Relax',
-    subtitle: 'Calm & Sleep',
+    id: "relax",
+    name: "4-7-8 Relax",
+    subtitle: "Calm & Sleep",
     pattern: [4, 7, 8, 0],
-    color: 'indigo',
+    color: "indigo",
   },
   {
-    id: 'energy',
-    name: 'Energy Boost',
-    subtitle: 'Awake & Alert',
+    id: "energy",
+    name: "Energy Boost",
+    subtitle: "Awake & Alert",
     pattern: [4, 0, 4, 0],
-    color: 'orange',
+    color: "orange",
   },
 ];
 
 const soundscapes = [
-  { id: 'rain', name: 'Soft Rain', icon: CloudRain },
-  { id: 'waves', name: 'Ocean Waves', icon: Waves },
-  { id: 'ambient', name: 'Deep Space', icon: Music },
+  { id: "rain", name: "Soft Rain", icon: CloudRain },
+  { id: "waves", name: "Ocean Waves", icon: Waves },
+  { id: "ambient", name: "Deep Space", icon: Music },
 ];
 
 export default function Relax() {
   const [isActive, setIsActive] = useState(false);
   const [selectedTechnique, setSelectedTechnique] = useState(techniques[0]);
-  const [phase, setPhase] = useState('Ready');
+  const [phase, setPhase] = useState("Ready");
   const [timer, setTimer] = useState(0);
   const [soundEnabled, setSoundEnabled] = useState(false);
   const [activeSound, setActiveSound] = useState(soundscapes[0]);
@@ -62,13 +62,13 @@ export default function Relax() {
         setTimer((t) => t + 1);
         const t = timer % cycleLength;
 
-        if (t < inhale) setPhase('Inhale');
-        else if (t < inhale + hold1) setPhase('Hold');
-        else if (t < inhale + hold1 + exhale) setPhase('Exhale');
-        else setPhase('Sustain');
+        if (t < inhale) setPhase("Inhale");
+        else if (t < inhale + hold1) setPhase("Hold");
+        else if (t < inhale + hold1 + exhale) setPhase("Exhale");
+        else setPhase("Sustain");
       }, 1000);
     } else {
-      setPhase('Ready');
+      setPhase("Ready");
       setTimer(0);
     }
     return () => clearInterval(interval);
@@ -92,8 +92,8 @@ export default function Relax() {
               onClick={() => setActiveSound(sound)}
               className={`flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all ${
                 activeSound.id === sound.id
-                  ? 'bg-white/10 text-white'
-                  : 'text-gray-500 hover:text-white'
+                  ? "bg-white/10 text-white"
+                  : "text-gray-500 hover:text-white"
               }`}
             >
               <sound.icon size={14} />
@@ -113,27 +113,27 @@ export default function Relax() {
           <motion.div
             animate={{
               scale:
-                phase === 'Inhale'
+                phase === "Inhale"
                   ? 1.5
-                  : phase === 'Exhale'
+                  : phase === "Exhale"
                     ? 1
-                    : phase === 'Hold' || phase === 'Sustain'
+                    : phase === "Hold" || phase === "Sustain"
                       ? 1.5
                       : 1,
               rotate: isActive ? 360 : 0,
             }}
             transition={{
               duration:
-                phase === 'Ready'
+                phase === "Ready"
                   ? 0
-                  : phase === 'Inhale'
+                  : phase === "Inhale"
                     ? selectedTechnique.pattern[0]
-                    : phase === 'Exhale'
+                    : phase === "Exhale"
                       ? selectedTechnique.pattern[2]
-                      : phase === 'Hold'
+                      : phase === "Hold"
                         ? 0
                         : 0,
-              ease: 'easeInOut',
+              ease: "easeInOut",
             }}
             className="relative mb-12 flex h-64 w-64 items-center justify-center"
           >
@@ -144,7 +144,7 @@ export default function Relax() {
 
             {/* Expanding Ring */}
             <motion.div
-              animate={{ scale: phase === 'Inhale' ? 1.2 : 1 }}
+              animate={{ scale: phase === "Inhale" ? 1.2 : 1 }}
               transition={{ duration: selectedTechnique.pattern[0] }}
               className={`absolute inset-0 rounded-full border border-${selectedTechnique.color}-400/50`}
             />
@@ -154,14 +154,14 @@ export default function Relax() {
               <motion.div
                 key={i}
                 animate={{
-                  scale: phase === 'Inhale' ? [1, 1.5, 1] : [1, 0.5, 1],
+                  scale: phase === "Inhale" ? [1, 1.5, 1] : [1, 0.5, 1],
                   rotate: [0, 180, 360],
                 }}
                 transition={{ duration: 10, repeat: Infinity, delay: i * 0.5 }}
                 className={`absolute h-4 w-4 rounded-full bg-${selectedTechnique.color}-400/40 blur-md`}
                 style={{
-                  top: '50%',
-                  left: '50%',
+                  top: "50%",
+                  left: "50%",
                   transform: `rotate(${i * 60}deg) translate(100px)`,
                 }}
               />
@@ -197,12 +197,12 @@ export default function Relax() {
                 className={`group relative overflow-hidden rounded-2xl border p-4 text-left transition-all ${
                   selectedTechnique.id === tech.id
                     ? `border-${tech.color}-500 bg-${tech.color}-900/20`
-                    : 'border-white/10 bg-white/5 hover:border-white/20'
+                    : "border-white/10 bg-white/5 hover:border-white/20"
                 }`}
               >
                 <div className="relative z-10">
                   <h3
-                    className={`font-bold ${selectedTechnique.id === tech.id ? 'text-white' : 'text-gray-300'}`}
+                    className={`font-bold ${selectedTechnique.id === tech.id ? "text-white" : "text-gray-300"}`}
                   >
                     {tech.name}
                   </h3>
@@ -219,7 +219,7 @@ export default function Relax() {
           </div>
 
           <Button
-            variant={isActive ? 'outline' : 'primary'}
+            variant={isActive ? "outline" : "primary"}
             onClick={() => setIsActive(!isActive)}
             className="w-48 text-lg"
           >

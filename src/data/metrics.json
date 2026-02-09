@@ -30,8 +30,8 @@
     { "time": "6 PM", "bpm": 95 },
     { "time": "9 PM", "bpm": 70 }
   ],
-  "activity": { 
-    "steps": 8432, 
+  "activity": {
+    "steps": 8432,
     "activeMinutes": 45,
     "weekly": [
       { "name": "Mon", "steps": 5000 },
@@ -44,8 +44,8 @@
     ]
   },
   "hydration": { "current": 1200, "target": 2500 },
-  "screenTime": { 
-    "hours": 4.5, 
+  "screenTime": {
+    "hours": 4.5,
     "status": "moderate",
     "weekly": [
       { "day": "Mon", "hours": 5.5 },

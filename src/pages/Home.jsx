@@ -1,9 +1,9 @@
-import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
-import { Button } from '../components/ui/Button';
-import { PageTransition } from '../components/ui/Loader';
-import { ArrowRight, Activity, Moon, Zap, Sparkles } from 'lucide-react';
-import logo from '../components/Images/logo.png'
+import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import { Button } from "../components/ui/Button";
+import { PageTransition } from "../components/ui/Loader";
+import { ArrowRight, Activity, Moon, Zap, Sparkles } from "lucide-react";
+import logo from "../components/Images/logo.png";
 
 const FloatingIcon = ({ icon: Icon, color, x, y, delay }) => (
   <motion.div
@@ -17,7 +17,7 @@ const FloatingIcon = ({ icon: Icon, color, x, y, delay }) => (
       duration: 5,
       repeat: Infinity,
       delay: delay,
-      ease: "easeInOut"
+      ease: "easeInOut",
     }}
     className={`absolute top-1/2 left-1/2 ${color} filter drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]`}
   >
@@ -80,7 +80,8 @@ export default function Home() {
             transition={{ delay: 0.5, duration: 0.8 }}
             className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto font-light leading-relaxed tracking-wide"
           >
-            The Operating System for your <span className="text-white font-medium">Wellness Journey</span>
+            The Operating System for your{" "}
+            <span className="text-white font-medium">Wellness Journey</span>
           </motion.p>
 
           <motion.div
@@ -91,14 +92,14 @@ export default function Home() {
           >
             <Button
               variant="primary"
-              onClick={() => navigate('/assessment')}
+              onClick={() => navigate("/assessment")}
               className="text-lg px-12 py-4"
             >
               Start Journey <ArrowRight size={24} />
             </Button>
             <Button
               variant="outline"
-              onClick={() => navigate('/dashboard')}
+              onClick={() => navigate("/dashboard")}
               className="text-lg px-12 py-4"
             >
               Skip to Dashboard
@@ -107,9 +108,27 @@ export default function Home() {
 
           {/* Floating Icons */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[150%] pointer-events-none">
-            <FloatingIcon icon={Activity} color="text-pink-400" x={-350} y={-250} delay={0} />
-            <FloatingIcon icon={Moon} color="text-purple-400" x={450} y={150} delay={1.5} />
-            <FloatingIcon icon={Zap} color="text-yellow-400" x={-450} y={250} delay={2.5} />
+            <FloatingIcon
+              icon={Activity}
+              color="text-pink-400"
+              x={-350}
+              y={-250}
+              delay={0}
+            />
+            <FloatingIcon
+              icon={Moon}
+              color="text-purple-400"
+              x={450}
+              y={150}
+              delay={1.5}
+            />
+            <FloatingIcon
+              icon={Zap}
+              color="text-yellow-400"
+              x={-450}
+              y={250}
+              delay={2.5}
+            />
           </div>
         </div>
       </div>

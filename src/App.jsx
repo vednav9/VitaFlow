@@ -1,17 +1,20 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import { AnimatePresence } from 'framer-motion';
-import { NotificationProvider, useNotification } from './context/NotificationContext';
-import Home from './pages/Home';
-import Assessment from './pages/Assessment';
-import Dashboard from './pages/Dashboard';
-import Relax from './pages/Relax';
-import Games from './pages/Games';
-import Journey from './pages/Journey';
+import React from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import {
+  NotificationProvider,
+  useNotification,
+} from "./context/NotificationContext";
+import Home from "./pages/Home";
+import Assessment from "./pages/Assessment";
+import Dashboard from "./pages/Dashboard";
+import Relax from "./pages/Relax";
+import Games from "./pages/Games";
+import Journey from "./pages/Journey";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
-  
+
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
@@ -31,10 +34,10 @@ const GlobalNotifications = () => {
 
   React.useEffect(() => {
     const alerts = [
-      { msg: 'Remember to drink water! 💧', type: 'info' },
-      { msg: 'Time for a quick stretch? 🧘', type: 'success' },
-      { msg: 'Your focus score is rising! 🚀', type: 'success' },
-      { msg: 'Take a deep breath... 🌬️', type: 'info' }
+      { msg: "Remember to drink water! 💧", type: "info" },
+      { msg: "Time for a quick stretch? 🧘", type: "success" },
+      { msg: "Your focus score is rising! 🚀", type: "success" },
+      { msg: "Take a deep breath... 🌬️", type: "info" },
     ];
 
     const timer = setInterval(() => {

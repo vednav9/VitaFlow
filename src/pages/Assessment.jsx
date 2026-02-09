@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
-import { Button } from '../components/ui/Button';
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import { Button } from "../components/ui/Button";
 import {
   Check,
   ChevronRight,
@@ -12,75 +12,75 @@ import {
   Brain,
   Coffee,
   Utensils,
-} from 'lucide-react';
+} from "lucide-react";
 
 const questions = [
   {
-    id: 'sleep',
-    category: 'Physical',
+    id: "sleep",
+    category: "Physical",
     icon: Moon,
-    text: 'How did you sleep last night?',
+    text: "How did you sleep last night?",
     options: [
-      { label: '< 5h', score: 20, feedback: 'Rest is vital!' },
-      { label: '5-7h', score: 60, feedback: 'Getting there.' },
-      { label: '7-9h', score: 100, feedback: 'Perfect!' },
-      { label: '> 9h', score: 80, feedback: 'Hibernating?' },
+      { label: "< 5h", score: 20, feedback: "Rest is vital!" },
+      { label: "5-7h", score: 60, feedback: "Getting there." },
+      { label: "7-9h", score: 100, feedback: "Perfect!" },
+      { label: "> 9h", score: 80, feedback: "Hibernating?" },
     ],
   },
   {
-    id: 'energy',
-    category: 'Physical',
+    id: "energy",
+    category: "Physical",
     icon: Zap,
-    text: 'How is your energy level right now?',
+    text: "How is your energy level right now?",
     options: [
-      { label: 'Exhausted', score: 20, feedback: 'Take it slow.' },
-      { label: 'Low', score: 40, feedback: 'Need a boost?' },
-      { label: 'Good', score: 80, feedback: 'Great!' },
-      { label: 'Unstoppable', score: 100, feedback: 'Let’s go!' },
+      { label: "Exhausted", score: 20, feedback: "Take it slow." },
+      { label: "Low", score: 40, feedback: "Need a boost?" },
+      { label: "Good", score: 80, feedback: "Great!" },
+      { label: "Unstoppable", score: 100, feedback: "Let’s go!" },
     ],
   },
   {
-    id: 'stress',
-    category: 'Mental',
+    id: "stress",
+    category: "Mental",
     icon: Brain,
-    text: 'How are you feeling mentally?',
+    text: "How are you feeling mentally?",
     options: [
-      { label: 'Overwhelmed', score: 20, feedback: 'Breathe...' },
-      { label: 'Stressed', score: 40, feedback: 'One thing at a time.' },
-      { label: 'Okay', score: 70, feedback: 'Dependent on the moment.' },
-      { label: 'Zen', score: 100, feedback: 'Inner peace.' },
+      { label: "Overwhelmed", score: 20, feedback: "Breathe..." },
+      { label: "Stressed", score: 40, feedback: "One thing at a time." },
+      { label: "Okay", score: 70, feedback: "Dependent on the moment." },
+      { label: "Zen", score: 100, feedback: "Inner peace." },
     ],
   },
   {
-    id: 'diet',
-    category: 'Lifestyle',
+    id: "diet",
+    category: "Lifestyle",
     icon: Utensils,
-    text: 'How was your nutrition today?',
+    text: "How was your nutrition today?",
     options: [
-      { label: 'Fast Food', score: 20, feedback: 'Treat yourself better.' },
-      { label: 'Mixed', score: 60, feedback: 'Balance is key.' },
-      { label: 'Balanced', score: 90, feedback: 'Fueling correctly!' },
-      { label: 'Super Clean', score: 100, feedback: 'Clean energy.' },
+      { label: "Fast Food", score: 20, feedback: "Treat yourself better." },
+      { label: "Mixed", score: 60, feedback: "Balance is key." },
+      { label: "Balanced", score: 90, feedback: "Fueling correctly!" },
+      { label: "Super Clean", score: 100, feedback: "Clean energy." },
     ],
   },
 ];
 
 const archetypes = {
   balanced: {
-    title: 'The Balanced Sage',
-    desc: 'You have found a great rhythm. Keep nurturing this harmony.',
+    title: "The Balanced Sage",
+    desc: "You have found a great rhythm. Keep nurturing this harmony.",
   },
   warrior: {
-    title: 'The Resilient Warrior',
-    desc: 'You push through challenges, but remember to rest as hard as you work.',
+    title: "The Resilient Warrior",
+    desc: "You push through challenges, but remember to rest as hard as you work.",
   },
   seeker: {
-    title: 'The Wellness Seeker',
-    desc: 'You are on the path, but need more consistency to reach your peak.',
+    title: "The Wellness Seeker",
+    desc: "You are on the path, but need more consistency to reach your peak.",
   },
   restless: {
-    title: 'The Restless Achiever',
-    desc: 'High energy but high stress. Prioritize grounding yourself.',
+    title: "The Restless Achiever",
+    desc: "High energy but high stress. Prioritize grounding yourself.",
   },
 };
 
@@ -93,7 +93,7 @@ const getArchetype = (score, stress) => {
 
 export default function Assessment() {
   const [step, setStep] = useState(-1); // -1 for Name Input
-  const [name, setName] = useState('');
+  const [name, setName] = useState("");
   const [answers, setAnswers] = useState({});
   const [totalScore, setTotalScore] = useState(0);
   const [isCalculating, setIsCalculating] = useState(false);
@@ -120,12 +120,12 @@ export default function Assessment() {
     setTimeout(() => {
       const finalScore = Math.min(
         100,
-        Math.round((totalScore + lastScore) / questions.length)
+        Math.round((totalScore + lastScore) / questions.length),
       );
       setIsCalculating(false);
       setResult({
         score: finalScore,
-        archetype: getArchetype(finalScore, answers['stress']?.score || 50),
+        archetype: getArchetype(finalScore, answers["stress"]?.score || 50),
       });
     }, 2000);
   };
@@ -159,7 +159,7 @@ export default function Assessment() {
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                onKeyDown={(e) => e.key === 'Enter' && handleStart()}
+                onKeyDown={(e) => e.key === "Enter" && handleStart()}
                 placeholder="What's your name?"
                 className="mb-8 w-full border-b-2 border-white/20 bg-transparent px-4 py-3 text-center text-3xl font-light text-white placeholder-white/20 focus:border-cyan-500 focus:outline-none"
                 autoFocus
@@ -182,7 +182,7 @@ export default function Assessment() {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -50 }}
-              transition={{ bg: 'easeOut', duration: 0.3 }}
+              transition={{ bg: "easeOut", duration: 0.3 }}
               className="w-full"
             >
               {/* Progress */}
@@ -209,13 +209,13 @@ export default function Assessment() {
                   <div className="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
                     {React.createElement(questions[step].icon, {
                       size: 32,
-                      className: 'text-cyan-300',
+                      className: "text-cyan-300",
                     })}
                   </div>
                 </div>
 
                 <h2 className="mb-12 text-center text-3xl font-light leading-snug text-white">
-                  {step === 0 ? `${name}, ` : ''}
+                  {step === 0 ? `${name}, ` : ""}
                   {questions[step].text.toLowerCase()}
                 </h2>
 
@@ -225,7 +225,7 @@ export default function Assessment() {
                       key={idx}
                       whileHover={{
                         scale: 1.02,
-                        backgroundColor: 'rgba(255,255,255,0.08)',
+                        backgroundColor: "rgba(255,255,255,0.08)",
                       }}
                       whileTap={{ scale: 0.98 }}
                       onClick={() => handleSelect(questions[step].id, option)}
@@ -257,12 +257,12 @@ export default function Assessment() {
               <div className="relative mb-8 h-32 w-32">
                 <motion.div
                   animate={{ rotate: 360 }}
-                  transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
                   className="absolute inset-0 rounded-full border-4 border-cyan-500/30 border-t-cyan-400"
                 />
                 <motion.div
                   animate={{ rotate: -180 }}
-                  transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
                   className="absolute inset-4 rounded-full border-4 border-purple-500/30 border-t-purple-400"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -314,7 +314,7 @@ export default function Assessment() {
                       animate={{
                         strokeDashoffset: 440 - (440 * result.score) / 100,
                       }}
-                      transition={{ duration: 1.5, ease: 'circOut' }}
+                      transition={{ duration: 1.5, ease: "circOut" }}
                     />
                     <defs>
                       <linearGradient
@@ -350,31 +350,31 @@ export default function Assessment() {
                   <div className="rounded-lg bg-white/5 p-3">
                     <div className="text-xs text-gray-400">Sleep</div>
                     <div
-                      className={`font-bold ${answers['sleep']?.score > 50 ? 'text-green-400' : 'text-orange-400'}`}
+                      className={`font-bold ${answers["sleep"]?.score > 50 ? "text-green-400" : "text-orange-400"}`}
                     >
-                      {answers['sleep']?.label}
+                      {answers["sleep"]?.label}
                     </div>
                   </div>
                   <div className="rounded-lg bg-white/5 p-3">
                     <div className="text-xs text-gray-400">Stress</div>
                     <div
-                      className={`font-bold ${answers['stress']?.score > 50 ? 'text-green-400' : 'text-orange-400'}`}
+                      className={`font-bold ${answers["stress"]?.score > 50 ? "text-green-400" : "text-orange-400"}`}
                     >
-                      {answers['stress']?.label}
+                      {answers["stress"]?.label}
                     </div>
                   </div>
                   <div className="rounded-lg bg-white/5 p-3">
                     <div className="text-xs text-gray-400">Diet</div>
                     <div
-                      className={`font-bold ${answers['diet']?.score > 50 ? 'text-green-400' : 'text-orange-400'}`}
+                      className={`font-bold ${answers["diet"]?.score > 50 ? "text-green-400" : "text-orange-400"}`}
                     >
-                      {answers['diet']?.label}
+                      {answers["diet"]?.label}
                     </div>
                   </div>
                 </div>
 
                 <Button
-                  onClick={() => navigate('/dashboard')}
+                  onClick={() => navigate("/dashboard")}
                   className="w-full"
                 >
                   Enter Dashboard <ChevronRight size={18} />
